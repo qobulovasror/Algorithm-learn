@@ -2,8 +2,8 @@ const express = require("express");
 // const errorMiddleware = require('../middleware/error');
 
 const algoritm = require("../routers/algorithm");
-const user = require("../routers/user");
-// const auth = require("../routers/auth");
+//const user = require("../routers/user");
+const auth = require("../routers/auth");
 
 module.exports = function (app) {
   app.use(express.urlencoded());
@@ -12,8 +12,8 @@ module.exports = function (app) {
   app.use("/api/algorithms", algoritm);
   //app.use("/api/algorithms", algoritm);
 
-  app.use("/api/me", user);
-  // app.use("/api/auth", auth);
+  //app.use("/api/me", user);
+  app.use("/api/auth", auth);
   // app.use(errorMiddleware);
 
 
