@@ -1,0 +1,1087 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.between {
+  justify-content: space-between;
+}
+.btn {
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #00f;
+  color: #fff;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+.dis-b {
+  display: block;
+}
+.dis-n {
+  display: none;
+}
+
+
+/* style for header  */
+header {
+  height: max-content;
+  background-size: cover;
+  padding: 5px 0;
+  background-color: #101011;
+}
+header .logo {
+  font-size: 30px;
+  padding: 5px 0;
+  color: coral;
+}
+header .nav{
+  color: #fff;
+  z-index: 7;
+}
+header .resMenu{
+  display: none;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+header .resMenu img{
+  width: 35px;
+}
+/* this code edit "a"  #traget-a*/
+header .nav li a  {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+header .nav ul li {
+  margin: 15px;
+  list-style: none;
+  position: relative;
+}
+header .nav ul li::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  top: 27px;
+  position: absolute;
+  left: 0;
+  transform: scale(0);
+  background-color: coral;
+  padding: 0px;
+  transition: .2s transform;
+}
+header .nav ul.row li:hover::after,
+header .nav ul.row li.targetNav::after {
+  transform: scale(1);
+}
+
+header .respNav {
+  display: none;
+}
+header .profil{
+  padding: 5px 0;
+  align-items: center;
+  position: relative;
+  z-index: 11;
+}
+header .profil .btn{
+  margin: 0 10px;
+  cursor: pointer;
+}
+header .profil .btn-login{
+  cursor: pointer;
+  padding: 0 10px;
+}
+header .profil .userName{
+  cursor: pointer;
+  padding: 0 10px;
+  color: coral;
+  font-size: 25px;
+}
+header .profil ul{
+  display: none;
+  position: absolute;
+  top: 70%;
+  right: 0;
+  cursor: pointer;
+  color: #fff;
+  width: max-content;
+  border-radius: 10px;
+  font-size: 17px;
+  border: 1px solid #000;
+  background-color: #00f;
+}
+header .respNav .profil ul {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+  border-radius: 0;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+}
+/* header .profil ul li{
+} */
+header .profil.row .userName:hover ul{
+  display: block;
+}
+.profil ul{
+  height: max-content;
+}
+/* .profil .userName , .profil ul {
+  display: none;
+} */
+
+
+/* slider for code */
+.slider {
+  width: 100%;
+  height: 90vh;
+  /* padding: 50px 0; */
+  background: url('../public/img/home-bg.jpg');
+}
+.slider-title {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+}
+.back-fon {
+  padding: 35px 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.596);
+}
+.slider .start {
+  padding: 10px 15px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  color: #ff7f50;
+  font-size: 20px;
+  /* background-color: #000; */
+  transform: translateX(-50%);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  /* transition: .3s background; */
+}
+.slider .start:hover {
+  background-color: #00f;
+  color: #fff;
+}
+.titleList {
+  color: coral;
+  
+}
+
+
+/* code for Categpre */
+#category {
+  width: 100%;
+  height: max-content;
+  padding: 30px 0;
+}
+.idPointer {
+  color: #f00;
+}
+.nav-category {
+  width: 100%;
+  height: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: coral;
+  margin: 10px 0 8px 0;
+  overflow: hidden;
+}
+.nav-category ul {
+  max-width: 530px;
+  overflow: auto;
+  list-style: none;
+}
+.nav-category li {
+  width: max-content;
+  height: max-content;
+  padding: 5px 8px;
+  background-color: #fff;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px solid #fff;
+}
+.nav-category li.target {
+  box-sizing: border-box;
+  border: 3px solid #00f;
+}
+.search {
+  width: max-content;
+  height: max-content;
+  background-color: coral;
+  border-radius: 10px;
+}
+.search input {
+  border-radius: 10px;
+  border: .5px solid #000;
+  padding: 5px 8px;
+  text-align: center;
+  font-size: 18px;
+}
+.algoriths {
+  list-style: none;
+  min-height: 80vh;
+  height: max-content;
+  flex-wrap: wrap;
+  align-content: start;
+}
+.algoriths .items {
+  width: 120px;
+  height: max-content;
+  text-align: center;
+  border: 1px solid #00f;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+.pagenation {
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pagenation .prev ,
+.pagenation .next,
+.thisPage .btn{
+  width: max-content;
+  height: max-content;
+  background-color: coral;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 5px;
+  color: #000;
+  cursor: pointer;
+}
+
+
+/* code for footer  */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+}
+footer a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+
+/* code for about page */
+#about {
+  width: 100%;
+  height: max-content;
+  padding: 40px;
+}
+#about .row {
+  flex-basis: 50%;
+}
+#about .right {
+  width: 50%;
+  padding: 10px;
+  margin-right: 30px;
+}
+#about .left {
+  width: 400px;
+  padding: 10px;
+}
+#about .right h3{
+  margin: 18px 0;
+}
+#about .right p{
+  margin: 18px 0;
+}
+
+
+.chat {
+  width: 80%;
+  height: 80vh;
+  margin: 10px auto;
+  /* background-color: rgba(0, 0, 0, 0.301); */
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px;
+}
+.chat .chats-nav, .chat .mainChat {
+  height: 74vh;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.chat .chats-nav {
+  width: 30%;
+  overflow: hidden auto;
+}
+.chat .chats-nav input {
+  width: 100%;
+  height: max-content;
+  padding: 5px;
+  border-radius: 5px;
+  border: .5px solid #000;
+}
+.chat .chats-nav ul.chatsList {
+  margin: 5px;
+}
+ul.chatsList li.chatItem{
+  width: 100%;
+  height: max-content;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.171);
+  border-radius: 8px;
+  margin-bottom: 5px ;
+}
+
+.chat .mainChat {
+  width: 65%;
+  padding: 0;
+}
+.mainChat .chatHeader {
+  width: 100%;
+  height: max-content;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.mainChat .chatHeader img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: -5px 5px;
+}
+.mainChat .chatHeader .chatTitle {
+  padding: 5px;
+}
+.mainChat .chatBody {
+  width: 100%;
+  height: 100%;
+  padding: 5px 15px;
+  overflow: hidden auto;
+  flex-direction: column-reverse;
+}
+.chatBody .msg {
+  width: 100%;
+  max-width: 100%;
+  height: max-content;
+  margin: 5px;
+}
+.chatBody .msg img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.chatBody .msg .text {
+  max-width: 90%;
+  width: max-content;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.171);
+  padding: 5px;
+  word-wrap: break-word;
+}
+.chatBody .msg.res {
+  position: relative;
+  left: 0;
+}
+.chatBody .msg.res .text {
+  margin-left: 5px;
+}
+.chatBody .msg.req .text {
+  margin-right: 5px;
+}
+.chatBody .msg.req {
+  position: relative;
+  flex-direction: row-reverse;
+  right: 0;
+}
+.chatBody .msg .text .userName {
+  font-size: 14px;
+  color: #00f;
+}
+.chatBody .msg .text p {
+  max-width: 620px;
+}
+
+.mainChat .mesgSend {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+.mainChat .mesgSend input{
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+}
+.mainChat .mesgSend button{
+  width: 100px;
+}
+
+
+/* code for contact page */
+#contact {
+  width: 100%;
+  height: max-content;
+  padding: 30px;
+  padding-top: 150px;
+  background: #ccc;
+  color: #fff;
+  background-image: url('../public/img/home-bg.jpg');
+  
+}
+#contact .container {
+  padding: 10px 5px;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+#contact .item {
+  width: 25%;
+  height: max-content;
+  padding: 10px;
+  margin: 0 10px;
+}
+#contact .item h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #fff;
+  width: max-content;
+}
+#contact .item li {
+  margin: 10px 0;
+}
+#contact .item li b {
+  margin: 0 5px;
+}
+#contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+#contact .item input[type='text'] {
+  width: 90%;
+  height: 30px;
+  border-radius: 10px;
+  padding: 10px;
+}
+#contact .item textarea {
+  width: 90%;
+  /* height: 30px; */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3px 0;
+}
+
+
+
+
+
+/* codes for regster and login pages */
+.regWin {
+  /* display: none; */
+  width: 300px;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  border: 1px solid #00f;
+  border-radius: 10px 0 0 10px;
+  padding: 90px 15px;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  text-align: center;
+  z-index: 14;
+  transition: 0.5s;
+}
+.regWin .closeWin {
+  font-size: 20px;
+  color: #000;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  border-radius: 10px;
+  border: 2px solid #f00;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.regWin p div {
+  text-decoration: underline;
+  color: #f00;
+  cursor: pointer;
+}
+.regs, .login {
+  margin: 25px 0;
+}
+.regs form, .login form {
+  margin: 10px;
+}
+.regs input, .login input {
+  width: 80%;
+  height: 30px;
+  margin: 8px auto;
+  padding: 7px;
+  color: #000;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+.regs input[type="submit"], .login input[type="submit"] {
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.red:focus {
+  border: 1px solid red;
+}
+.regWin .errorTxt {
+  color: rgb(255, 0, 0);
+  width: 80%;
+  font-size: 17px;
+  padding: 9px 3px;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 6px;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  background: #ffffffb8;
+  animation: errTxt1 8s 1;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, -0.97, 1, 1.81);
+}
+@keyframes errTxt1 {
+  0%,99.9%{
+    width: 80%;
+    padding: 9px 3px;
+  }
+  100%{
+    top: -100%;
+  }
+}
+.regWin .errorTxt::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    color: red;
+    background: red;
+    height: 4px;
+    top: 90%; 
+    left: 0%;
+    animation: errTxt 5s linear 1;
+    animation-fill-mode: both;
+}
+@keyframes errTxt {
+  0%{
+    width: 100%;
+  }
+  100%{
+    width: 0%;
+    display: none;
+  }
+}
+
+
+
+
+
+/* codes for algo window */
+.algoModalWin {
+  /* display: none; */
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden scroll;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.842);
+  color: #fff;
+  padding-top: 30px;
+}
+.modalWin {
+  width: 100%;
+  height: max-content;
+  padding: 35px ;
+}
+.algoModalWin .close {
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  font-size: 30px;
+  color: #fff;
+  padding: 0 8px;
+  border: 2px solid #f00;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.algoModalWin a {
+  color: #fff;
+  text-decoration: underline;
+}
+.algoModalWin h2 {
+  margin: 15px 0;
+}
+.algoModalWin .author {
+  margin-bottom: 5px;
+}
+.algoModalWin  .info{
+  width: 80%;
+  margin-bottom: 10px;
+}
+.progLang {
+  width: max-content;
+  height: max-content;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-bottom: 1px;
+}
+.progLang li {
+  margin: 0 5px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+.progLang li.targetItem {
+  border-color: #f00;
+  background-color: #00f;
+}
+
+
+.algoModalWin  .programCode, .result pre  {
+  width: max-content;
+  height: max-content;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding-right: 30px;
+  background-color: #272822;
+}
+.algoModalWin  .programCode .codHeader{
+  width: 100%;
+  height: max-content;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.codHeader .copyBtn {
+  cursor: pointer;   
+}
+.programCode.lang-js {
+  display: none;
+}
+
+.result {
+  margin: 10px;
+}
+
+
+
+/* code for responsive */
+@media only screen and (max-width: 1030px) {
+  .container {
+      width: 90%;
+  }
+  header .nav ul li{
+      margin: 15px 5px;
+  }
+  header .profil .btn{
+      margin: 2px;
+  }
+  .profil .btn-login{
+      margin: 2px;
+      padding: 0 3px;
+      color: #fff;
+  }
+  .algoriths {
+      justify-content: center;
+  }
+  #contact .row.between{
+      flex-direction: column;
+  }
+
+  /* contact */
+  #contact .row.between{
+      flex-direction: column;
+  }
+  #contact .container {
+      padding: 30px;
+  }
+  #contact .item {
+      width: 80%;
+      height: max-content;
+      padding: 10px;
+      margin: 20px auto;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  header .resMenu {
+      display: block;
+  }
+  header .nav ul.row {
+       display: none;
+  }
+  header .respNav {
+    padding: 10px;
+    height: max-content;
+    border: 1px solid coral;
+    border-radius: 10px;
+    background: #000;
+    z-index: 14;
+    transition: 0.5s heigth;
+    position: absolute;
+    width: 90%;
+}
+  .respNav ul.row li {
+    padding: 6px;
+    font-size: 20px;
+  }
+  .respNav a {
+    color: #fff;
+  }
+  .respNav .row {
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+  header .profil.row{
+    display: none;
+  }
+  header .respNav .profil{
+    display: block;
+    text-align: center;
+  }
+  header .respNav .profil ul li {
+    background-color: #101011;
+    width: 100%;
+    border: 1px solid coral;
+    border-radius: 10px;
+  }
+  header .respNav .profil ul li a{
+    width: 100%;
+  }
+  
+  .nav-category li {
+      padding: 5px;
+      margin: 0 4px;
+  }
+
+  /* about */
+  #about .row {
+      flex-direction: column;
+  }
+  #about .left {
+      width: 220px;
+      padding: 5px;
+      margin: 0 auto;
+  }
+  #about .row .right{
+      width: 100%;
+  }
+
+  
+}
+@media only screen and (max-width: 600px) {
+  .nav-category li {
+      padding: 3px;
+      margin: 0 2px;
+  }
+  
+  .search input {
+      width: 33px;
+      transition: .5s;
+  }
+  .search input:focus {
+      width: 200px;
+  }
+
+  /* chat */
+  .chat .chats-nav {
+      display: none;
+  }
+  .chat .mainChat {
+      width: 100%;
+      margin: 0;
+  }
+  .regWin {
+      width: 100%;
+      border-radius: 0;
+  }
+
+  .algoModalWin .programCode, .result pre {
+      width: max-content;
+      max-width: 100%;
+      overflow-y: auto;
+  }
+  .progLang {
+      overflow-y: auto;
+      max-width: 100%;
+  }
+}
+
+
+
+
+/* createAlgo */
+/*box form*/
+.box1 {
+    background: #ccc;
+    height: max-content;
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+}
+
+.box1 h2{
+    margin: 10px 0px;
+    font-size: 32px;
+}
+
+.box1 form{
+    width: 100%;
+    height: max-content;
+    border: 1px solid #000;
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px 0px;
+    background: #c7c9cb;
+}
+
+.box1 form label  {
+    font-size: 23px;
+    margin-top: 25px;
+}
+
+.box1 input {
+    width: 100%;
+    min-height: 37px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+.box1 form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-top: 2px;
+  font-size: 17px;
+}
+.box1 form select option {
+  padding: 5px;
+  font-size: 17px;
+}
+.box1 label h3 {
+    margin-top: 10px;
+    margin-bottom: -3px;
+    width: max-content;
+}
+
+.box1 textarea#intoText {
+    width: 90%;
+    min-height: 60px;
+    padding: 5px;
+    font-size: 15px;
+}
+.box1 .text-box {
+    width: 100%;
+    height: max-content;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px 0;
+}
+.box1 form .btn {
+    padding: 10px;
+}
+.box1 .text-box label h3 {
+    margin-top: 0px;
+}
+.box1 .text-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #000;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+.box1 .text-box textarea#algoinfo {
+  height: 90px;
+}
+.box1 .text-box textarea#algo {
+  height: 350px;
+}
+
+.box1 textarea#text {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 760px) {
+    .box1 form {
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .box1 form {
+        padding: 10px;
+    }
+}
+
+
+/* prifil for code */
+
+
+.box {
+	background: #ccc;
+	height: max-content;
+	width: 100%;
+	padding: 25px 0;
+    position: relative;
+}
+.box .doc {
+    text-align: center;
+    margin: 10px 0;
+}
+.box .row.wrap {
+    justify-content: center;
+}
+
+.box-form {
+    margin: 10px 20px;
+    width: 45%;
+}
+
+.box h3 {
+    width: 400px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    padding: 10px; 
+    border: 1px solid #000;
+    border-bottom: none;
+}
+
+.box form {
+    width: 400px;
+    height: min-content;
+    padding: 20px;
+    background-color: #ccc;
+    border: 1px solid #000;
+}
+.box .box-form h3 {
+  height: max-content;
+}
+.box label {
+    display: block;
+    font-size: 20px;
+    font-weight: bolt;
+}
+
+.box input {
+    width: 80%;
+    height: 30px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: .5px solid #555 ;
+    background-color: #ccc;
+    margin: 2px 0;
+    margin-bottom: 10px;
+}
+.box input[type='submit'] {
+    padding: 5px;
+    width: 50%;
+    background-color: #00f;
+    color: #fff;
+    border: 1px solid #00f;
+}
+.box input[type="submit"]:hover {
+    background-color: #088dff;
+}
+
+
+/* code for footer  */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+footer a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+/*media*/
+@media only screen and (max-width: 760px) {
+    .box .row {
+        width: max-content;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+}
